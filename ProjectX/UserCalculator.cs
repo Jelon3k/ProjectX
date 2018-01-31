@@ -23,6 +23,8 @@ namespace ProjectX
         double wynik;
         double  powierzchnia;
         double powCalkowita;
+        double transportWaga;
+        double sklepRabat;
 
         int wagaKgM;
         int sztuk;
@@ -71,12 +73,23 @@ namespace ProjectX
                 SQLiteCommand cmd = sQLiteConnection.CreateCommand();
                 cmd.CommandText = "SELECT waga FROM tabelaE where id=1";
                 object waga = cmd.ExecuteScalar();
+                transportWaga = (double)waga;
                 sQLiteConnection.Close();
-                return (double)waga;
-                
+                return transportWaga;
             }
         }
-
+        public double GetRabat()
+        {
+            {
+                sQLiteConnection.Open();
+                SQLiteCommand cmd = sQLiteConnection.CreateCommand();
+                cmd.CommandText = "SELECT rabat FROM tabelaE where id=1";
+                object rabat = cmd.ExecuteScalar();
+                sklepRabat = (double)rabat;
+                sQLiteConnection.Close();
+                return sklepRabat;
+            }
+        }
 
 
 
@@ -238,14 +251,11 @@ namespace ProjectX
 
         private void btnOblicz_Click_1(object sender, EventArgs e)
         {
+            GetRabat();
+            GetWaga();
             sztuk = Convert.ToInt32(sztukTX.Text);
-            Console.WriteLine("jest to pobrana liczba sztuk   " + sztuk);
             Oblicz(sztuk, powierzchnia);
-            Console.WriteLine("jest to wynik z metody Oblicz  " + wynik);
-
             ObliczCena(sztuk, cenaZaM, powierzchnia);
-            Console.WriteLine("jest to wynik z metody Oblicz  " + cenaWynik);
-
             ListViewItem item = new ListViewItem(symbol);
             item.SubItems.Add(sztuk.ToString());
             item.SubItems.Add(powierzchnia.ToString());

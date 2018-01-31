@@ -19,9 +19,9 @@ namespace ProjectX
             InitializeComponent();
         }
 
-        private double rabat;
+        private double rabat = 0;
 
-        private double waga;
+        private double waga = 0;
 
         SQLiteConnection sQLiteConnection = new SQLiteConnection(string.Format("Data Source={0}", Path.Combine(Application.StartupPath, "DB.db")));
         Connector connector = new Connector();
@@ -65,7 +65,7 @@ namespace ProjectX
                 }
                 else
                 {
-                    rabat = Convert.ToDouble(ladownoscTx.Text);
+                    rabat = Convert.ToDouble(rabatTx.Text);
                     waga = Convert.ToDouble(ladownoscTx.Text);
                     UpdateSettings();
                 }
