@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
@@ -32,6 +27,7 @@ namespace ProjectX
         double sumaMkwadratowe = 0;
         double sumaKg = 0;
         double sumaNetto = 0;
+        double wynikTransport;
 
         int wagaKgM;
         int sztuk;
@@ -111,10 +107,11 @@ namespace ProjectX
             wynikSumaCenyNetto = sztuk * cenaNetto;
             return wynikSumaCenyNetto;
         }
-
-
-
-
+        public double ObliczTransport(double sumaWagi,double ladowoscCiezarowki)
+        {
+            wynikTransport = sumaWagi / ladowoscCiezarowki;
+            return wynikTransport;
+        }
         public void ShowDataA()
         {
             connector.OpenConnection();
@@ -154,14 +151,10 @@ namespace ProjectX
             connector.CloseConnection();
 
         }
-
-       
-
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
         {
             if (operation == 1 || operation == 2 || operation == 3)
             {
-
                 try
                 {
                     ID = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells[0].Value.ToString());
@@ -218,54 +211,33 @@ namespace ProjectX
                 }
             }
             }
-
-     
-
-
         private void comboBunifuData_onItemSelected_1(object sender, EventArgs e)
         {
 
             if (comboBunifuData.selectedIndex == 0)
             {
-
-
                 operation = 1;
                 ShowDataA();
-
-
-
             }
             if (comboBunifuData.selectedIndex == 1)
             {
-
                 operation = 2;
                 ShowDataB();
 
                 Console.WriteLine("element " + operation);
-
-
-
-
             }
             if (comboBunifuData.selectedIndex == 2)
             {
-
-
                 operation = 3;
                 ShowDataC();
                 Console.WriteLine("element " + operation);
 
-
-
-
             }
             if (comboBunifuData.selectedIndex == 3)
             {
-
                 operation = 4;
                 ShowDataD();
                 Console.WriteLine("element " + operation);
-
             }
 
         }
@@ -299,21 +271,16 @@ namespace ProjectX
                 hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
                 hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
                 hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
-
             }
             sumaMkwadratowe = hSumaMkwadratowe;
             sumaKg = hSumaKg;
             sumaNetto = hSumaNetto;
-
+            ObliczTransport(sumaKg, transportWaga);
             label5.Text = sumaMkwadratowe.ToString();
             label6.Text = sumaKg.ToString();
             label8.Text = sumaNetto.ToString();
-            
-
-
-
+            label1.Text = wynikTransport.ToString();
         }
-
         private void UserCalculator_Load(object sender, EventArgs e)
         {
 
