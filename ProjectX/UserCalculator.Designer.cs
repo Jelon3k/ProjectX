@@ -55,6 +55,7 @@
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnOblicz = new Bunifu.Framework.UI.BunifuThinButton2();
             this.comboBunifuData = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -372,11 +373,22 @@
             this.comboBunifuData.TabIndex = 81;
             this.comboBunifuData.onItemSelected += new System.EventHandler(this.comboBunifuData_onItemSelected_1);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(802, 486);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.TabIndex = 98;
+            // 
             // UserCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -397,6 +409,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Name = "UserCalculator";
             this.Size = new System.Drawing.Size(1000, 513);
+            this.Load += new System.EventHandler(this.UserCalculator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -432,5 +445,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 btnOblicz;
         private Bunifu.Framework.UI.BunifuDropdown comboBunifuData;
+        private System.Windows.Forms.Label label8;
     }
 }

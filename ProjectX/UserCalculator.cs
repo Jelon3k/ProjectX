@@ -29,6 +29,10 @@ namespace ProjectX
         double sklepMarza;
         double wynikSumaCenyNetto;
 
+        double sumaMkwadratowe = 0;
+        double sumaKg = 0;
+        double sumaNetto = 0;
+
         int wagaKgM;
         int sztuk;
         Connector connector = new Connector();
@@ -285,10 +289,34 @@ namespace ProjectX
             item.SubItems.Add(wynik.ToString());
             item.SubItems.Add(wynikCenaNetto.ToString());
             item.SubItems.Add(wynikSumaCenyNetto.ToString());
-
-
-
             listView1.Items.Add(item);
+
+            double hSumaMkwadratowe = 0;
+            double hSumaKg = 0;
+            double hSumaNetto = 0;
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
+                hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
+                hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
+
+            }
+            sumaMkwadratowe = hSumaMkwadratowe;
+            sumaKg = hSumaKg;
+            sumaNetto = hSumaNetto;
+
+            label5.Text = sumaMkwadratowe.ToString();
+            label6.Text = sumaKg.ToString();
+            label8.Text = sumaNetto.ToString();
+            
+
+
+
+        }
+
+        private void UserCalculator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
