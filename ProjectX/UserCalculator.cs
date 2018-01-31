@@ -21,10 +21,13 @@ namespace ProjectX
         string symbol;
         double cenaWynik;
         double wynik;
-        double  powierzchnia;
+        double powierzchnia;
         double powCalkowita;
         double transportWaga;
         double sklepRabat;
+        double wynikCenaNetto;
+        double sklepMarza;
+        double wynikSumaCenyNetto;
 
         int wagaKgM;
         int sztuk;
@@ -61,7 +64,7 @@ namespace ProjectX
             wynik = powCalkowita * wagaKgM;
             return wynik;
         }
-        public double ObliczCena(int sztuk, int cena,double powierzchnia)
+        public double ObliczCena(int sztuk, int cena, double powierzchnia)
         {
             cenaWynik = powCalkowita * cena;
             return cenaWynik;
@@ -89,6 +92,20 @@ namespace ProjectX
                 sQLiteConnection.Close();
                 return sklepRabat;
             }
+        }
+        public double CenaNetto(double sklepRabat, double cenaZaM, double sklepMarza)
+        {
+            double procent;
+            double etapPierwszy;
+            procent = sklepRabat * 0.01;
+            etapPierwszy = cenaZaM * procent;
+            wynikCenaNetto = cenaZaM - etapPierwszy + sklepMarza;
+            return wynikCenaNetto;
+        }
+        public double SumaCenyNetto(double sztuk, double cenaNetto)
+        {
+            wynikSumaCenyNetto = sztuk * cenaNetto;
+            return wynikSumaCenyNetto;
         }
 
 
@@ -254,6 +271,10 @@ namespace ProjectX
             GetRabat();
             GetWaga();
             sztuk = Convert.ToInt32(sztukTX.Text);
+            sklepMarza = Convert.ToDouble(marzaTx.Text);
+            CenaNetto(sklepRabat, cenaZaM, sklepMarza);
+            SumaCenyNetto(sztuk, wynikCenaNetto);
+
             Oblicz(sztuk, powierzchnia);
             ObliczCena(sztuk, cenaZaM, powierzchnia);
             ListViewItem item = new ListViewItem(symbol);
@@ -262,7 +283,8 @@ namespace ProjectX
             item.SubItems.Add(powCalkowita.ToString());
             item.SubItems.Add(wagaKgSzt.ToString());
             item.SubItems.Add(wynik.ToString());
-
+            item.SubItems.Add(wynikCenaNetto.ToString());
+            item.SubItems.Add(wynikSumaCenyNetto.ToString());
 
 
 
