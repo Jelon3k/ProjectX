@@ -136,6 +136,7 @@
             this.Controls.Add(this.ladownoscTx);
             this.Name = "UserSettings";
             this.Size = new System.Drawing.Size(1000, 513);
+            this.Load += new System.EventHandler(this.UserSettings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

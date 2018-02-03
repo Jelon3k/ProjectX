@@ -81,5 +81,10 @@ namespace ProjectX
         {
 
         }
+
+        private void UserSettings_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

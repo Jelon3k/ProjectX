@@ -244,46 +244,90 @@ namespace ProjectX
 
         private void btnOblicz_Click_1(object sender, EventArgs e)
         {
-            GetRabat();
-            GetWaga();
-            sztuk = Convert.ToInt32(sztukTX.Text);
-            sklepMarza = Convert.ToDouble(marzaTx.Text);
-            CenaNetto(sklepRabat, cenaZaM, sklepMarza);
-            SumaCenyNetto(sztuk, wynikCenaNetto);
+        
 
-            Oblicz(sztuk, powierzchnia);
-            ObliczCena(sztuk, cenaZaM, powierzchnia);
-            ListViewItem item = new ListViewItem(symbol);
-            item.SubItems.Add(sztuk.ToString());
-            item.SubItems.Add(powierzchnia.ToString());
-            item.SubItems.Add(powCalkowita.ToString());
-            item.SubItems.Add(wagaKgSzt.ToString());
-            item.SubItems.Add(wynik.ToString());
-            item.SubItems.Add(wynikCenaNetto.ToString());
-            item.SubItems.Add(wynikSumaCenyNetto.ToString());
-            listView1.Items.Add(item);
+                GetRabat();
+                GetWaga();
+                if (sztukTX.Text == "" || marzaTx.Text == "")
+                {
+                    MessageBox.Show("Wypełnij pola: sztuk, marza");
+                }
+                else
+                {
+                    sztuk = Convert.ToInt32(sztukTX.Text);
+                    sklepMarza = Convert.ToDouble(marzaTx.Text);
+                    CenaNetto(sklepRabat, cenaZaM, sklepMarza);
+                    SumaCenyNetto(sztuk, wynikCenaNetto);
 
-            double hSumaMkwadratowe = 0;
-            double hSumaKg = 0;
-            double hSumaNetto = 0;
-            for (int i = 0; i < listView1.Items.Count; i++)
-            {
-                hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
-                hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
-                hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
-            }
-            sumaMkwadratowe = hSumaMkwadratowe;
-            sumaKg = hSumaKg;
-            sumaNetto = hSumaNetto;
-            ObliczTransport(sumaKg, transportWaga);
-            label5.Text = sumaMkwadratowe.ToString();
-            label6.Text = sumaKg.ToString();
-            label8.Text = sumaNetto.ToString();
-            label1.Text = wynikTransport.ToString();
+                    Oblicz(sztuk, powierzchnia);
+                    ObliczCena(sztuk, cenaZaM, powierzchnia);
+                    ListViewItem item = new ListViewItem(symbol);
+                    item.SubItems.Add(sztuk.ToString());
+                    item.SubItems.Add(powierzchnia.ToString());
+                    item.SubItems.Add(powCalkowita.ToString());
+                    item.SubItems.Add(wagaKgSzt.ToString());
+                    item.SubItems.Add(wynik.ToString());
+                    item.SubItems.Add(wynikCenaNetto.ToString());
+                    item.SubItems.Add(wynikSumaCenyNetto.ToString());
+                    listView1.Items.Add(item);
+
+                    double hSumaMkwadratowe = 0;
+                    double hSumaKg = 0;
+                    double hSumaNetto = 0;
+                    for (int i = 0; i < listView1.Items.Count; i++)
+                    {
+                        hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
+                        hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
+                        hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
+                    }
+                    sumaMkwadratowe = hSumaMkwadratowe;
+                    sumaKg = hSumaKg;
+                    sumaNetto = hSumaNetto;
+                    ObliczTransport(sumaKg, transportWaga);
+                    label5.Text = sumaMkwadratowe.ToString();
+                    label6.Text = sumaKg.ToString();
+                    label8.Text = sumaNetto.ToString();
+                    label1.Text = Math.Round(wynikTransport,1).ToString();
+                }
+            
         }
         private void UserCalculator_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listView1.Items.Count > 0)
+                {
+                    listView1.Items.Remove(listView1.SelectedItems[0]);
+
+                    double hSumaMkwadratowe = 0;
+                    double hSumaKg = 0;
+                    double hSumaNetto = 0;
+                    for (int i = 0; i < listView1.Items.Count; i++)
+                    {
+                        hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
+                        hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
+                        hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
+                    }
+                    sumaMkwadratowe = hSumaMkwadratowe;
+                    sumaKg = hSumaKg;
+                    sumaNetto = hSumaNetto;
+                    ObliczTransport(sumaKg, transportWaga);
+                    label5.Text = sumaMkwadratowe.ToString();
+                    label6.Text = sumaKg.ToString();
+                    label8.Text = sumaNetto.ToString();
+                    label1.Text = Math.Round(wynikTransport, 1).ToString();
+                
+                MessageBox.Show("usunięto element");
+                }
+            }catch
+            {
+                MessageBox.Show("Wybierz element do usunięcia");
+            }
         }
     }
 }
