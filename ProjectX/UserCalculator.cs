@@ -244,9 +244,9 @@ namespace ProjectX
 
         private void btnOblicz_Click_1(object sender, EventArgs e)
         {
-        
+          
 
-                GetRabat();
+            GetRabat();
                 GetWaga();
                 if (sztukTX.Text == "" || marzaTx.Text == "")
                 {
@@ -276,11 +276,14 @@ namespace ProjectX
                     double hSumaNetto = 0;
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
-                        hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
-                        hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
-                        hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
-                    }
-                    sumaMkwadratowe = hSumaMkwadratowe;
+                    hSumaMkwadratowe += double.Parse(listView1.Items[i].SubItems[3].Text);
+                    hSumaKg += double.Parse(listView1.Items[i].SubItems[5].Text);
+                    hSumaNetto += double.Parse(listView1.Items[i].SubItems[7].Text);
+                
+
+                }
+                    
+                sumaMkwadratowe = hSumaMkwadratowe;
                     sumaKg = hSumaKg;
                     sumaNetto = hSumaNetto;
                     ObliczTransport(sumaKg, transportWaga);

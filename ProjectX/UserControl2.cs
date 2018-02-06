@@ -107,22 +107,16 @@ namespace ProjectX
         {
             try
             {
-                if (symbolTx.Text == "")
-                {
-                    MessageBox.Show("Wypełnij wszystkie pola poprawnie pamiętając, że tylko w kolumnie symbol możesz używać różnych znaków");
-                }
-                else
-                {
                     connector.OpenConnection();
                     SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter("INSERT INTO tabelaA VALUES (null,'" + symbolTx.Text + "','" + dlugoscTx.Text + "','" + wysokoscTx.Text + "','" + wagaTx.Text + "','" + wagaBTx.Text + "','" + powTx.Text + "','" + cenaTx.Text + "')", sQLiteConnection);
                     DataSet dataSet = new System.Data.DataSet();
                     dataAdapter.Fill(dataSet);
                     connector.CloseConnection();
-                }
+                    MessageBox.Show("Dodano wiersz do bazy danych", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex,"Błąd",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -135,10 +129,11 @@ namespace ProjectX
                 DataSet dataSet = new System.Data.DataSet();
                 dataAdapter.Fill(dataSet);
                 connector.CloseConnection();
+                MessageBox.Show("Dodano wiersz do bazy danych", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -151,10 +146,11 @@ namespace ProjectX
                 DataSet dataSet = new System.Data.DataSet();
                 dataAdapter.Fill(dataSet);
                 connector.CloseConnection();
+                MessageBox.Show("Dodano wiersz do bazy danych", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -168,10 +164,11 @@ namespace ProjectX
                 DataSet dataSet = new System.Data.DataSet();
                 dataAdapter.Fill(dataSet);
                 connector.CloseConnection();
+                MessageBox.Show("Dodano wiersz do bazy danych", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -182,17 +179,16 @@ namespace ProjectX
                 using (SQLiteCommand cmd = sQLiteConnection.CreateCommand())
                 {
                     sQLiteConnection.Open();
-
                     cmd.CommandText = String.Format("DELETE FROM tabelaA WHERE id={0}", ID);
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataA();
-                    MessageBox.Show("Usunieto elementy pod Id:  " + ID);
+                    MessageBox.Show("Usunięt wiersz z bazy danych. Id: "+ ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -208,12 +204,12 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataB();
-                    MessageBox.Show("Usunieto elementy pod Id:  " + ID);
+                    MessageBox.Show("Usunięt wiersz z bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -229,12 +225,12 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataC();
-                    MessageBox.Show("Usunieto elementy pod Id:  " + ID);
+                    MessageBox.Show("Usunięt wiersz z bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -251,13 +247,13 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataD();
-                    MessageBox.Show("Usunieto elementy pod Id:  " + ID);
+                    MessageBox.Show("Usunięt wiersz z bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -275,13 +271,13 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataA();
-                    MessageBox.Show("Dokonano aktualizacji elementu:  " + ID);
+                    MessageBox.Show("Dokonano aktualizacji bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -298,13 +294,13 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataB();
-                    MessageBox.Show("Dokonano aktualizacji elementu:  " + ID);
+                    MessageBox.Show("Dokonano aktualizacji bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -315,21 +311,17 @@ namespace ProjectX
                 using (SQLiteCommand cmd = sQLiteConnection.CreateCommand())
                 {
                     sQLiteConnection.Open();
-
                     cmd.CommandText = String.Format("UPDATE tabelaC SET symbol ='" + symbolTx.Text + "',dlugosc ='" + dlugoscTx.Text + "',wysokosc ='" + wysokoscTx.Text + "',wagaA='" + wagaTx.Text + "',wagaB='" + wagaBTx.Text + "',powierzchnia='" + powTx.Text + "',cenazam='" + cenaTx.Text + "'  WHERE id={0}", ID);
-
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataC();
-                    MessageBox.Show("Dokonano aktualizacji elementu:  " + ID);
-
+                    MessageBox.Show("Dokonano aktualizacji bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         public void UpdateD(int ID)
         {
@@ -338,23 +330,18 @@ namespace ProjectX
                 using (SQLiteCommand cmd = sQLiteConnection.CreateCommand())
                 {
                     sQLiteConnection.Open();
-
                     cmd.CommandText = String.Format("UPDATE tabelaD SET  dlugosc ='" + dlugoscTx.Text + "',szerokosc ='" + szerokoscTx.Text + "', wysokosc='" + wysokoscTx.Text + "',waga='" + wagaTx.Text + "',cenaa='" + zlSztTx.Text + "',cenab='" + zlMbTx.Text + "'  WHERE id={0}", ID);
-
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
                     ShowDataD();
-                    MessageBox.Show("Dokonano aktualizacji elementu:  " + ID);
-
+                    MessageBox.Show("Dokonano aktualizacji bazy danych. Id: " + ID, "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Treść błedu  " + ex, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-
         private void comboBunifuData_onItemSelected(object sender, EventArgs e)
         {
             if (comboBunifuData.selectedIndex == 0)
@@ -363,9 +350,6 @@ namespace ProjectX
                 ModTx();
                 operation = 1;
                 ShowDataA();
-
-
-
             }
             if (comboBunifuData.selectedIndex == 1)
             {
@@ -373,11 +357,6 @@ namespace ProjectX
                 ModTx();
                 operation = 2;
                 ShowDataB();
-                Console.WriteLine("element " + operation);
-
-
-
-
             }
             if (comboBunifuData.selectedIndex == 2)
             {
@@ -385,18 +364,12 @@ namespace ProjectX
                 ModTx();
                 operation = 3;
                 ShowDataC();
-                Console.WriteLine("element " + operation);
-
-
-
-
             }
             if (comboBunifuData.selectedIndex == 3)
             {
                 ClearText();
                 operation = 4;
                 ShowDataD();
-                Console.WriteLine("element " + operation);
 
                 labelZlSzt.Visible = true;
                 zlSztTx.Visible = true;
@@ -433,10 +406,6 @@ namespace ProjectX
                 wagaBTx.LineIdleColor = Color.Gray;
                 powTx.LineIdleColor = Color.Gray;
                 cenaTx.LineIdleColor = Color.Gray;
-
-
-
-
             }
         }
 
@@ -454,10 +423,6 @@ namespace ProjectX
             zlSztTx.Text = "";
             dlugoscTx.Text = "";
             wysokoscTx.Text = "";
-
-
-
-
         }
         public void ModTx()
         {
@@ -489,8 +454,16 @@ namespace ProjectX
             {
                 try
                 {
-                    Insterta();
-                    ShowDataA();
+                    if (symbolTx.Text == "" || dlugoscTx.Text == "" || wysokoscTx.Text == "" || wagaTx.Text == "" || wagaBTx.Text == "" || powTx.Text == "" || cenaTx.Text  == "")
+                    {
+                        MessageBox.Show("Wypełnij wszystkie pola poprawnie pamiętając, że tylko w kolumnie symbol możesz używać różnych znaków.W pozostałych kolumnach używaj cyfr.", "Uwaga", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    }
+                    else {
+                        Insterta();
+                        ShowDataA();
+                        MessageBox.Show("Dodano wiesz do tablicy", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
                 catch
                 {
@@ -502,8 +475,17 @@ namespace ProjectX
             {
                 try
                 {
-                    InstertB();
-                    ShowDataB();
+                    if (symbolTx.Text == "" || dlugoscTx.Text == "" || wysokoscTx.Text == "" || wagaTx.Text == "" || wagaBTx.Text == "" || powTx.Text == "" || cenaTx.Text == "")
+                    {
+                        MessageBox.Show("Wypełnij wszystkie pola poprawnie pamiętając, że tylko w kolumnie symbol możesz używać różnych znaków.W pozostałych kolumnach używaj cyfr.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        InstertB();
+                        ShowDataB();
+                        MessageBox.Show("Dodano wiesz do tablicy", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
                 catch
                 {
@@ -514,8 +496,17 @@ namespace ProjectX
             {
                 try
                 {
-                    InstertC();
-                    ShowDataC();
+                    if (symbolTx.Text == "" || dlugoscTx.Text == "" || wysokoscTx.Text == "" || wagaTx.Text == "" || wagaBTx.Text == "" || powTx.Text == "" || cenaTx.Text == "")
+                    {
+                        MessageBox.Show("Wypełnij wszystkie pola poprawnie pamiętając, że tylko w kolumnie symbol możesz używać różnych znaków.W pozostałych kolumnach używaj cyfr.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        InstertC();
+                        ShowDataC();
+                        MessageBox.Show("Dodano wiesz do tablicy", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
                 catch
                 {
@@ -526,15 +517,23 @@ namespace ProjectX
             {
                 try
                 {
-                    InstertD();
-                    ShowDataD();
+                    if (dlugoscTx.Text == "" || szerokoscTx.Text == "" || wysokoscTx.Text == "" || wagaTx.Text == "" || zlSztTx.Text == "" || zlMbTx.Text == "")
+                    {
+                        MessageBox.Show("Wypełnij wszystkie pola poprawnie pamiętając, że w kolumnach używaj cyfr.", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                    else
+                    {
+                        InstertD();
+                        ShowDataD();
+                        MessageBox.Show("Dodano wiesz do tablicy", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 catch
                 {
 
                 }
             }
-            Console.WriteLine("guzik" + operation);
         }
 
 
@@ -581,7 +580,6 @@ namespace ProjectX
 
                 {
                     MessageBox.Show("Coś poszło nie tak ;-(");
-                    //MessageBox.Show("Wypełnij kolumne symbol znakami ,a pozostałe kolumny cyframi. Zwróć uwagę na kolumnę powierzchnia użyj tam do cyfr dziesiętnych kropki");
                 }
             }
             else
@@ -614,30 +612,38 @@ namespace ProjectX
                 {
                     MessageBox.Show("Coś poszło nie tak ;-(");
                 }
-
-
             }
-
-
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
             if (operation == 1)
             {
-                DeleteA(ID);
+                if (MessageBox.Show("Czy chcesz usunąć wybrany element", "Usuwanie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DeleteA(ID);
+                }
             }
             if (operation == 2)
             {
-                DeleteB(ID);
+                if (MessageBox.Show("Czy chcesz usunąć wybrany element", "Usuwanie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DeleteB(ID);
+                }
             }
             if (operation == 3)
             {
-                DeleteC(ID);
+                if (MessageBox.Show("Czy chcesz usunąć wybrany element", "Usuwanie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DeleteC(ID);
+                }
             }
             if (operation == 4)
             {
-                DeleteD(ID);
+                if (MessageBox.Show("Czy chcesz usunąć wybrany element", "Usuwanie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DeleteD(ID);
+                }
             }
         }
 
@@ -645,19 +651,31 @@ namespace ProjectX
         {
             if (operation == 1)
             {
-                UpdateA(ID);
+                if (MessageBox.Show("Czy chcesz z aktualizować wybrany element", "Aktualizacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    UpdateA(ID);
+                }
             }
             if (operation == 2)
             {
-                UpdateB(ID);
+                if (MessageBox.Show("Czy chcesz z aktualizować wybrany element", "Aktualizacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    UpdateB(ID);
+                }
             }
             if (operation == 3)
             {
-                UpdateC(ID);
+                if (MessageBox.Show("Czy chcesz z aktualizować wybrany element", "Aktualizacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    UpdateC(ID);
+                }
             }
             if (operation == 4)
             {
-                UpdateD(ID);
+                if (MessageBox.Show("Czy chcesz z aktualizować wybrany element", "Aktualizacja", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    UpdateD(ID);
+                }
             }
         }
 

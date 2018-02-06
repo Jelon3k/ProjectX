@@ -313,7 +313,7 @@
             this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Red;
             this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Wyczyść";
+            this.bunifuThinButton23.ButtonText = "Stwórz Dokument";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton23.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
             this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
