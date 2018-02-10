@@ -328,6 +328,7 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(152, 51);
             this.bunifuThinButton23.TabIndex = 83;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // btnOblicz
             // 

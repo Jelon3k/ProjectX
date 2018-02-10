@@ -678,30 +678,5 @@ namespace ProjectX
                 }
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void labelSymbol_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void symbolTx_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dlugoscTx_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

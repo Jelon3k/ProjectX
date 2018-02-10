@@ -439,7 +439,7 @@
             this.dlugoscTx.Size = new System.Drawing.Size(104, 33);
             this.dlugoscTx.TabIndex = 46;
             this.dlugoscTx.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dlugoscTx.OnValueChanged += new System.EventHandler(this.dlugoscTx_OnValueChanged);
+          //  this.dlugoscTx.OnValueChanged += new System.EventHandler(this.dlugoscTx_OnValueChanged);
             // 
             // label2
             // 
@@ -451,7 +451,7 @@
             this.label2.Size = new System.Drawing.Size(99, 19);
             this.label2.TabIndex = 45;
             this.label2.Text = "Długość (Cm)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+    //        this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // symbolTx
             // 
@@ -471,7 +471,7 @@
             this.symbolTx.Size = new System.Drawing.Size(104, 33);
             this.symbolTx.TabIndex = 44;
             this.symbolTx.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.symbolTx.OnValueChanged += new System.EventHandler(this.symbolTx_OnValueChanged);
+          //  this.symbolTx.OnValueChanged += new System.EventHandler(this.symbolTx_OnValueChanged);
             // 
             // labelSymbol
             // 
@@ -483,7 +483,7 @@
             this.labelSymbol.Size = new System.Drawing.Size(60, 19);
             this.labelSymbol.TabIndex = 43;
             this.labelSymbol.Text = "Symbol";
-            this.labelSymbol.Click += new System.EventHandler(this.labelSymbol_Click);
+         //   this.labelSymbol.Click += new System.EventHandler(this.labelSymbol_Click);
             // 
             // dataGridView1
             // 
@@ -496,7 +496,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(841, 207);
             this.dataGridView1.TabIndex = 42;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+      //      this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // UserControl2

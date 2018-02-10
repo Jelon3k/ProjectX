@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using System.Text;
 
 namespace ProjectX
 {
@@ -31,6 +32,9 @@ namespace ProjectX
 
         int wagaKgM;
         int sztuk;
+
+        string path = @"d:\MyTest.txt";
+
         Connector connector = new Connector();
         SQLiteConnection sQLiteConnection = new SQLiteConnection(string.Format("Data Source={0}", Path.Combine(Application.StartupPath, "DB.db")));
 
@@ -283,7 +287,7 @@ namespace ProjectX
 
                 }
                     
-                sumaMkwadratowe = hSumaMkwadratowe;
+                    sumaMkwadratowe = hSumaMkwadratowe;
                     sumaKg = hSumaKg;
                     sumaNetto = hSumaNetto;
                     ObliczTransport(sumaKg, transportWaga);
@@ -332,5 +336,67 @@ namespace ProjectX
                 MessageBox.Show("Wybierz element do usunięcia");
             }
         }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+
+            try
+            {
+                {
+                    TextWriter tw = new StreamWriter("d:\\Wycena.txt");
+                    StringBuilder listViewContent = new StringBuilder();
+                    tw.WriteLine("");
+                    tw.WriteLine(dt);
+                    tw.WriteLine("");
+                    tw.WriteLine("!!!   Rozmieszczenie kolumn   !!!");
+                    tw.WriteLine("");
+                    tw.WriteLine("|1.   Symbol       | ");
+                    tw.WriteLine("|2.   Ilość Szt.   | ");
+                    tw.WriteLine("|3.   Pow.Płyty m² | ");
+                    tw.WriteLine("|4.   Suma m²      | ");
+                    tw.WriteLine("|5.   Waga Sz/ Kg  | ");
+                    tw.WriteLine("|6.   Łączna Waga  | ");
+                    tw.WriteLine("|7.   Cena Netto m²| ");
+                    tw.WriteLine("|8.   Cena nettto za ruszty o danej długości| ");
+                    tw.WriteLine("");
+                    tw.WriteLine("");
+
+
+
+                    for (int item = 0; item < this.listView1.Items.Count; item++)
+                    {
+                        for (int subitem = 0;
+                           subitem < this.listView1.Columns.Count;
+                           subitem++)
+                        {
+                            listViewContent.Append
+                            (this.listView1.Items[item].SubItems[subitem].Text);
+                            if (subitem < this.listView1.Columns.Count - 1)
+                                listViewContent.Append("  " +
+                                    "|  ");
+                        }
+                        tw.WriteLine(listViewContent);
+                        listViewContent = new StringBuilder();
+                    }
+                    tw.WriteLine("");
+                    tw.WriteLine("");
+
+                    tw.WriteLine("Liczba transportów: " + Math.Round(wynikTransport, 1).ToString());
+
+                    tw.Close();
+                    MessageBox.Show("Stworzono dokument", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Błąd  "+ ex, "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
+
+
 }
+
