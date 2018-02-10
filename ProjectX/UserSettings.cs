@@ -43,13 +43,13 @@ namespace ProjectX
                     cmd.ExecuteNonQuery();
                     sQLiteConnection.Close();
 
-                    MessageBox.Show("Dokonano aktualizacji parametrów: Waga " + waga + " kg", "Rabat " + rabat + " %");
+                    MessageBox.Show("Dokonano aktualizacji parametrów:\nWaga: " + waga + " kg \nRabat: " + rabat + " %","Sukces",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bląd !!!" + ex);
+                MessageBox.Show("Bląd !!!" + ex,"Uwaga",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -61,6 +61,7 @@ namespace ProjectX
             {
                 if (ladownoscTx.Text == "" || ladownoscTx.Text == "")
                 {
+                    MessageBox.Show("Wypełnij dane " , "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
                 else
