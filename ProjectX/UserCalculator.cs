@@ -45,7 +45,7 @@ namespace ProjectX
             comboBunifuData.AddItem("Ruszta betonowe dla trzody (Szer. 45,4cm Szcz. 17mm Pow. Stąpania 80mm");
             comboBunifuData.AddItem("Ruszta betonowe dla trzody (Szer. 44cm Szcz. 18mm Pow. Stąpania 92mm");
             comboBunifuData.AddItem("Ruszta betonowe dla loszek,loch i knurów (Szer. 52cm Szcz. 20mm Pow. Stąpania 84mm");
-            comboBunifuData.AddItem("Belki żelbetonowe - Podciągi dla betonowych podłóg rusztowych dla trzody");
+           // comboBunifuData.AddItem("Belki żelbetonowe - Podciągi dla betonowych podłóg rusztowych dla trzody");
 
 
             dataGridView2.RowTemplate.Height = 20;
@@ -254,7 +254,7 @@ namespace ProjectX
                 GetWaga();
                 if (sztukTX.Text == "" || marzaTx.Text == "")
                 {
-                    MessageBox.Show("Wypełnij pola: sztuk, marza");
+                    MessageBox.Show("Wypełnij pola: Liczba sztuk, Marża","Uwaga",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -344,7 +344,7 @@ namespace ProjectX
             try
             {
                 {
-                    TextWriter tw = new StreamWriter("d:\\Wycena.txt");
+                    TextWriter tw = new StreamWriter(@"Wycena z dnia "+dt.ToString("dd/MM/yy")+" godzina "+dt.ToString("H/mm/ss")+".txt");
                     StringBuilder listViewContent = new StringBuilder();
                     tw.WriteLine("");
                     tw.WriteLine(dt);
@@ -380,13 +380,14 @@ namespace ProjectX
                         listViewContent = new StringBuilder();
                     }
                     tw.WriteLine("");
+                    tw.Write("Suma m²:"+ sumaMkwadratowe.ToString()+"  ");
+                    tw.Write("Suma Kg:" + sumaKg.ToString() + "  ");
+                    tw.Write("Suma Netto:" + sumaNetto.ToString() + "  ");
                     tw.WriteLine("");
-
                     tw.WriteLine("Liczba transportów: " + Math.Round(wynikTransport, 1).ToString());
 
                     tw.Close();
                     MessageBox.Show("Stworzono dokument", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
             }
             catch(Exception ex)
