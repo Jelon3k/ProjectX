@@ -1,0 +1,18 @@
+
+2018-02-11 12:34:34
+
+!!!   Rozmieszczenie kolumn   !!!
+
+|1.   Symbol       | 
+|2.   Ilość Szt.   | 
+|3.   Pow.Płyty m² | 
+|4.   Suma m²      | 
+|5.   Waga Sz/ Kg  | 
+|6.   Łączna Waga  | 
+|7.   Cena Netto m²| 
+|8.   Cena nettto za ruszty o danej długości| 
+
+
+
+Suma m²:0  Suma Kg:0  Suma Netto:0  
+Liczba transportów: 0

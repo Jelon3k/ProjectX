@@ -1,0 +1,97 @@
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\ProjectX.exe.config
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\ProjectX.exe
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\ProjectX.pdb
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.Form1.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.Properties.Resources.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.GenerateResource.Cache
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.CoreCompileInputs.cache
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.exe
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.pdb
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.UserCalculator.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.UserContact.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.UserSettings.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\EntityFramework.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\EntityFramework.xml
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.xml
+C:\Users\przem\source\repos\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.csprojResolveAssemblyReference.cache
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl1.resources
+C:\Users\przem\source\repos\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl2.resources
+D:\ProjectX\ProjectX\bin\Debug\ProjectX.exe.config
+D:\ProjectX\ProjectX\bin\Debug\ProjectX.exe
+D:\ProjectX\ProjectX\bin\Debug\ProjectX.pdb
+D:\ProjectX\ProjectX\bin\Debug\EntityFramework.dll
+D:\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll
+D:\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.EF6.dll
+D:\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.Linq.dll
+D:\ProjectX\ProjectX\bin\Debug\EntityFramework.xml
+D:\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.xml
+D:\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll.config
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.csprojResolveAssemblyReference.cache
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.Form1.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.Properties.Resources.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.UserCalculator.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.UserContact.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl1.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl2.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.UserSettings.resources
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.GenerateResource.Cache
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.CoreCompileInputs.cache
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.exe
+D:\ProjectX\ProjectX\obj\Debug\ProjectX.pdb
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\ProjectX.exe.config
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\ProjectX.exe
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\ProjectX.pdb
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\EntityFramework.dll
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.dll
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.EF6.dll
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.Linq.dll
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\EntityFramework.xml
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.xml
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.xml
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll.config
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.csprojResolveAssemblyReference.cache
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.Form1.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.Properties.Resources.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.UserCalculator.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.UserContact.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl1.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl2.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.UserSettings.resources
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.GenerateResource.Cache
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.CoreCompileInputs.cache
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.exe
+D:\kopia programu\2018-01-28 godz 12\ProjectX\ProjectX\obj\Debug\ProjectX.pdb
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\ProjectX.exe.config
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\ProjectX.exe
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\ProjectX.pdb
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\EntityFramework.dll
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.dll
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.EF6.dll
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.Linq.dll
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\EntityFramework.xml
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\EntityFramework.SqlServer.xml
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.xml
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\bin\Debug\System.Data.SQLite.dll.config
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.csprojResolveAssemblyReference.cache
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.Form1.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.Properties.Resources.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.UserCalculator.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.UserContact.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl1.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.UserControl2.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.UserSettings.resources
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.GenerateResource.Cache
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.csproj.CoreCompileInputs.cache
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.exe
+D:\kopia programu\2018-01-31godz 12 — kopia\ProjectX\ProjectX\obj\Debug\ProjectX.pdb

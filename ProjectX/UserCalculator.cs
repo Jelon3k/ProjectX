@@ -33,7 +33,6 @@ namespace ProjectX
         int wagaKgM;
         int sztuk;
 
-        string path = @"d:\MyTest.txt";
 
         Connector connector = new Connector();
         SQLiteConnection sQLiteConnection = new SQLiteConnection(string.Format("Data Source={0}", Path.Combine(Application.StartupPath, "DB.db")));
